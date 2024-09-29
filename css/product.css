@@ -1,0 +1,229 @@
+
+.colors label::after {
+    /* next two lines - to break line after each option */
+    content: '';
+    display: block;
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+label[for=green]::after {
+    background-color: #33CC66;
+}
+
+label[for=pink]::after {
+    background-color: #FF6666;
+}
+
+label[for=blue]::after {
+    background-color: #6666FF;
+}
+
+.colors input:checked+label::after {
+    border: 6px solid rgba(0,0,0,0.3);
+}
+
+.colors label::after {
+    box-sizing: border-box; /* so border will not grow the disks */
+
+    border: 6px solid rgba(0,0,0,0);
+    transition: 1s;
+}
+
+.colors label:hover::after {
+     border: 6px solid rgba(0,0,0,0.1);
+     cursor: pointer;
+}
+
+.colors input[type="radio"] {
+    display: none;
+}
+
+.colors input:not(:checked) +label img {
+    display: none;
+}
+
+.colors {
+    position: relative;
+    padding-top: 90px;
+}
+
+.colors label::after {
+    position: absolute;
+    top: 30px;
+}
+
+label[for="green"]::after {
+    left: 0;
+}
+
+label[for="pink"]::after {
+    left: 60px;
+}
+
+label[for="blue"]::after {
+    left: 120px;
+}
+
+/* because <legend> is not considered part of <fieldset> */
+.colors legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* for resposiveness */
+.colors label img {
+    /*display: block;*/
+    max-width: 100%;
+}
+
+.product {
+    color: #333333;
+    line-height: 1.3;
+    margin-top: 2em;
+}
+
+.product h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.product p {
+     /* em initially is 16px*/
+    font-size: 1.2em;
+    /* now em (the current font-size) is 1.2*16px, that is 19.2px */
+    font-style: italic;
+    /* em in the next line is 19.2px */
+    margin-bottom: 1em; 
+}
+
+/* CSS3 font properties (values between [ ] are optional) */
+/* font: [font-style] [font-variant] [font-weight] font-size [/line-height] font-family */
+.product legend {
+    display: block;
+    font: bold 0.9em/2.5 Arial;   /* line-height is 2.5 the current font size */
+    text-transform: uppercase;
+}
+
+.buy {
+    background: #91BD3C;
+    border: none;
+    color: #333333;
+
+    /* em initially is 16px*/
+    font-size: 1.4em;
+    /* now em (the current font-size) is 1.4*16px, that is 22.4px */
+    text-transform: uppercase;
+
+    box-shadow: 0 1px 3px #777777;
+
+    display: block;
+    /* em in the next two lines is 22.4px */
+    padding: 0.5em 1em;
+    margin: 1em 0;
+}
+
+@media (min-width: 630px) {
+
+    .product {
+        position: relative;
+        padding-left: 40%;
+        font-size: 1.2em;
+    }
+
+    .colors {
+        position: static;
+        padding: 0;
+    }
+
+    .colors legend {
+        position: static;
+    }
+
+    .colors label img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        max-width: 35%;
+        max-height: 100%;
+    }
+
+    .colors label::after {
+        position: static;
+        float: left;
+        margin-right: 10px;
+    }
+
+    fieldset {
+        display: inline-block;
+        vertical-align: top;
+
+        margin: 1em 0;
+        min-width: 240px;
+        width: 45%;
+    }
+} /* end of @media (min-width: 630px) */
+
+.details {
+    padding: 2em 0;
+}
+
+.details h2 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.details p {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+    text-align: justify;
+}
+
+@media (min-width: 500px) {
+    .details {
+        font-size: 1.2em;
+    }
+}
+
+table {
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+
+thead {
+    background-color: #999999;
+}
+
+thead th {
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+td {
+    padding: 0.3em;
+}
+
+tr:nth-child(2n) {
+    background-color: #CCCCCC;
+}
+
+td:first-child {
+    font-style: italic;
+}
+
+.product-back {
+    background-color: #F2F2F2;
+    margin-top: 1em;
+    border-top: 2px solid #CCCCCC;
+}
+
+.colors label img {
+    border: 2px solid #CCCCCC;
+}

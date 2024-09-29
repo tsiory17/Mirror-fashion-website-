@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mirror Fasshion</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+    <header class="container">
+        <h1><img src="img/logo.png" alt="Mirror Fashion logo" /></h1>
+        <p class="shopping-bag">
+            No item in the shopping bag
+        </p>
+        <nav class="menu-options">
+            <ul>
+                <li><a href="#">Your account</a></li>
+                <li><a href="#">Wish list</a></li>
+                <li><a href="#">Fidelity card</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="product-back">
+        <div class="container">
+            <div class="product">
+                <h1>Fuzzy Cardigan</h1>
+                <p>for only Can$ 49.99</p>
+                <form>
+                    <fieldset class="colors">
+                        <legend>Choose a color</legend>
+                        <input type="radio" name="color" value="green" id="green" checked />
+                        <label for="green">
+                            <img src="img/products/photo1-green.png" alt="Product in green" />
+                        </label>
+                        <input type="radio" name="color" value="pink" id="pink" />
+                        <label for="pink">
+                            <img src="img/products/photo1-pink.png" alt="Product in pink" />
+                        </label>
+                        <input type="radio" name="color" value="blue" id="blue" />
+                        <label for="blue">
+                            <img src="img/products/photo1-blue.png" alt="Product in blue" />
+                        </label>
+                    </fieldset>
+                    <fieldset class="sizes">
+                        <legend>Choose a size</legend>
+                        <input type="range" min="36" max="46" value="42" step="2"
+                               name="size" id="sizeId" autocomplete="off"
+                               oninput="sizeoutputId.value=sizeId.value" />
+                        <output id="sizeoutputId">42</output>
+                    </fieldset>
+                    <button class="buy">Buy</button>
+                </form>
+            </div>
+            <div class="details">
+                <h2>Product Description</h2>
+                <p>
+                    This is the best cardigan jacket you have ever seen.
+                    Great Italian material with print designed by artisans
+                    from the Krotor community on the Greek islands.
+                    Buy now and receive today by our express delivery.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Model</td>
+                            <td>Cardigan</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>Cotton and polyester</td>
+                        </tr>
+                        <tr>
+                            <td>Colors</td>
+                            <td>Blue, Pink, and Green</td>
+                        </tr>
+                        <tr>
+                            <td>Wash</td>
+                            <td>Wash by hand</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="img/logo-footer.png" alt="Mirror Fashion logo" />
+            <ul class="social">
+                <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+                <li><a href="http://plus.google.com/mirrorfashion">Google</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
